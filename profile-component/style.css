@@ -1,0 +1,237 @@
+html{
+    
+    --preto: #0C0B0B;
+    --cinza: #312f2f;
+    --branco: #B7B7B7;
+    --verde: #046313;
+    --azul: #044A7D;
+    --amarelo: #725200;
+    
+    /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
+    font-size: 62.5%;
+    
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: black;
+    
+    color: var(--branco);
+}
+
+h1, h2, p{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card{
+    width: 50rem;
+    height: 20rem;
+    background-color: var(--preto);
+    
+    padding: 5rem;
+}
+
+.card .perfil{
+    display: grid;
+    grid-template-columns: 83% 17%;
+
+    align-items: center;
+}
+
+.card .perfil .dados{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.card .perfil .dados .foto_perfil{
+    height: 7rem;
+    width: 7rem;
+    margin-right: 1rem;
+}
+
+.card .perfil .dados .foto_perfil img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 10rem;
+}
+
+.card .perfil .dados .nome h1{
+    font-weight: 700;
+    font-size: 16pt;
+}
+
+.card .perfil .dados .nome p{
+    font-size: 10pt;
+    font-weight: 400;
+}
+
+.card .perfil .editar{
+    display: flex;
+    align-items: center;
+    
+    border-radius: .7rem;
+    border: none;
+    height: 4rem;
+    width: 100%;
+
+    padding: 0 .3rem 0 .3rem;
+
+    justify-content: space-around;
+    
+    background-color: var(--cinza);
+    color: var(--branco);
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.card .perfil .editar:hover{
+    opacity: .8;
+}
+
+.card .infos{
+    display: flex;
+    justify-content: space-between;
+
+    height: 5rem;
+
+    margin: 5rem 0 5rem 0;
+}
+
+.card .infos .card_infos{
+    height: 5rem;
+    width: 12.5rem;
+
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+}
+
+.card .infos .card_infos h2{
+    font-size: 10pt;
+    font-weight: 400;
+}
+
+.card .infos .card_infos p{
+    font-weight: 700;
+    font-size: 20pt;
+}
+
+#projetos{
+    background-color: var(--verde);
+}
+
+#estrelas{
+    background-color: var(--azul);
+}
+
+#seguidores{
+    background-color: var(--amarelo);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 570px){
+    
+    body{
+        height: 100vh;
+        width: 100vw;
+
+        display: block;
+    }
+
+    .card{
+        justify-content: center;
+        flex-direction: column;
+
+        height: 55rem;
+        width: 100%;
+        
+        margin-top: 10rem;
+        padding: 0;
+    }
+
+    .card .perfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 16.5rem;
+    }
+
+    .card .perfil .dados .foto_perfil{
+        margin-top: -5rem;
+        margin-right: 0rem;
+
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .card .perfil .dados .foto_perfil img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .card .perfil .dados{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card .perfil .dados .nome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .card .perfil .dados .nome h1{
+        font-weight: 700;
+        font-size: 20pt;
+    }
+
+    .card .perfil .dados .nome p{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+
+    .card .perfil .editar{
+        width: 8.5rem;
+    }
+
+    .card .infos{
+        flex-direction: column;
+        align-items: center;
+
+        height: 36rem;
+        margin: 2.5rem 0 0 0; 
+    }
+
+    .card .infos .card_infos{
+        margin-bottom: 2rem;
+
+        width: 20rem;
+        height: 8rem;
+    }
+
+    .card .infos .card_infos h2{
+        font-size: 12pt;
+        font-weight: 400;
+    }
+
+    .card .infos .card_infos p{
+        font-weight: 700;
+        font-size: 28pt;
+    }
+
+}
