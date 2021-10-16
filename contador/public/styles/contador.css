@@ -1,0 +1,49 @@
+.container{
+    justify-content: start;
+}
+
+header{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--verde);
+}
+
+.tempo-restante{
+    color: var(--cinza-claro);
+
+    width: 110rem;
+
+    display: grid;
+    grid-template-rows: 13rem 1fr 5rem;
+}
+
+.tempo-restante #tempo,
+.tempo-restante #medida{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tempo-restante #tempo{
+    font-weight: 600;
+    font-size: 15rem;
+    color: white;
+}
+
+.tempo-restante #medida{
+    color: var(--verde);
+}
+
+.tempo-restante h1{
+    vertical-align: middle;
+    height: 100%;
+    font-size: 10rem;
+}
+
+.button{
+    width: 15rem;
+}
+

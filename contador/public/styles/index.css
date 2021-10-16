@@ -1,0 +1,38 @@
+/* Data */
+
+.container *{
+    width: 40rem;
+}
+
+input#input-data{
+    height: 6rem;
+    width: 36rem;
+
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    margin-bottom: 2rem;
+    padding: 0 2rem 0 2rem;
+    
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    background-color: var(--cinza-escuro);
+    color: var(--cinza-claro);
+}
+
+h1{
+    color: var(--verde);
+    margin: 0 0 2rem 0;
+
+    font-weight: 700;
+
+}
+
+h2{
+    margin: 0 0 1.5rem 0;
+    color: var(--cinza-claro);
+    
+    font-weight: 400;
+    font-size: 4rem;
+}

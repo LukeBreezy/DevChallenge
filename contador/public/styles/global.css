@@ -1,0 +1,78 @@
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+/* Conteudo global */
+
+html{
+    --verde: #21EB00;
+    --cinza-escuro: #191A18;
+    --cinza-claro: #727272;
+
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 3rem;
+
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 4rem;
+
+    width: 100%;
+    height: 100%;
+}
+
+.button{
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+
+    height: 6rem;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    background-color: var(--verde);
+
+    text-decoration: none;
+    color: var(--cinza-escuro);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1{
+    margin: 0;
+}
+
+.button:hover{
+    opacity: .5;
+}
+
+.button:disabled{
+    background-color: red;
+    cursor: not-allowed;
+}
