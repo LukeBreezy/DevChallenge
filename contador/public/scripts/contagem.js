@@ -8,9 +8,11 @@ $(() => {
     rodaContador()
 })
 
+
+// Atualiza o contador a cada segundo
 function rodaContador(){
-    
-    setInterval(() => {
+
+    const teste = setInterval(() => {
         
         // Tempo Restante a ser exibido
         const tempo_restante = calculaTempoRestante()
@@ -20,15 +22,20 @@ function rodaContador(){
         campo_minuto.text(tempo_restante.minutos)
         campo_segundo.text(tempo_restante.segundos)
         
-        console.log('\n\n')
-        console.log(`dia: ${tempo_restante.dias}`)
-        console.log(`hora: ${tempo_restante.horas}`)
-        console.log(`minuto: ${tempo_restante.minutos}`)
-        console.log(`segundo: ${tempo_restante.segundos}`)
+        if(tempo_restante.resto <= 0){
+            clearInterval(teste)
+        }
+
+        // console.log('\n\n')
+        // console.log(`dia: ${tempo_restante.dias}`)
+        // console.log(`hora: ${tempo_restante.horas}`)
+        // console.log(`minuto: ${tempo_restante.minutos}`)
+        // console.log(`segundo: ${tempo_restante.segundos}`)
     }, 1000)
 }
 
 
+// Calcula o tempo restante 
 function calculaTempoRestante(){
     
     const data_fim = sessionStorage.getItem('data_fim')
@@ -49,6 +56,7 @@ function calculaTempoRestante(){
 
     // Tempo restante a ser exibido
     return {
+        'resto': tempo_restante_ms,
         'dias': aux_dia,
         'horas': aux_hora - aux_dia * 24,
         'minutos': aux_minuto - aux_hora * 60,
